@@ -1,0 +1,47 @@
+Kunskapskontroll 2 A_1 important informations(A_2 information are missing):
+
+
+
+part 1, 2, 4 are common for kontroll2 A_1 and A_2.
+write your own code HTML, CSS and possibly normalize.
+Website should be built 'Mobile first'.
+Publish Website through Github.(YOu can create one site for one github account. So recommended to make A_1 and A_2 on different account.) read https://pages.github.com/
+Book presentation through schedule which opens a couple days before presentation day. 
+
+Each group member should do least 1 page. Common part is where everyone participate.:
+Start page - Daniel     product list page -           product page  -  Byung Guk 
+
+Common part:
+Header with menu to different pages in website.
+shopping basket in header with chosen list of products and their total price should in it. 
+Footer(for example: fictional contact info, social media link, icon etc...)
+
+One of these sites should be done for VG.(not group, it is individuall)
+Kontaktsida, Registrera dig sida, kassasida
+
+
+
+
+what is done:
+
+choose what e-shop offers and to whom
+choose company name
+choose wireframe tool(can use papers and upload it as pdf instead.)
+Github link for A_1
+
+
+need to do:
+
+(may need) trello setup
+github link for A_2(other github account)
+project plan(includes company description, group members assignment, graphic profile and its motivation from UX and UI perspective, github link) - ons 12/2
+upload mockups to github repo A_1 - ons 12/2
+upload project plan to Googledrive and share it with teacher - ons 12/2
+motivation for chosen company name - for presentation
+motivation for chosen UX and UI - for presentation
+logo 
+mockup/wireframe for every webpage for every different device(tablet, laptop, desktop etc...) - for presentation
+start page
+product list page
+product page
+common part()

@@ -1,0 +1,93 @@
+/*Adjust grid settings, id and class names and other things for your pages.*/
+
+
+/*footer settings for all responsive layout.*/
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i|Fresca|Monda:400,700&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+	background-color: #fff;
+	font-family: 'EB Garamond', serif;
+}
+
+h1{
+	font-family: 'Monda', sans-serif;
+}
+
+.container {
+	display: grid;
+	margin: 20px;
+}
+
+.footer{
+	grid-area: footer;
+	display: grid;
+	justify-content: space-evenly;
+	background-color: rgba(36,255,0,0.5);
+	border-top: 2px solid #000;
+	margin: 0px;
+	grid-column-gap: 2%;
+}
+
+.address {grid-area: address;}
+.contact {grid-area: contact;}
+.sitemap {grid-area: sitemap;}
+
+
+
+/*mobile*/
+@media screen and (max-width: 767px){
+
+	body{font-size: 12px;}
+
+	h1{font-size: 20px;}
+
+	.footer{
+		grid-template-columns: 2fr;
+		grid-template-rows: minmax(53.3333333px, 1fr);
+		grid-template-areas:
+			"address contact"
+	}
+
+	.advertisement{display:none;}
+
+	.sitemap{display:none;}
+
+}
+
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width: 1200px){
+
+	body{font-size: 18px;}
+
+	h1{font-size: 30px;}
+
+	.footer{
+		grid-template-columns: 3fr;
+		grid-template-rows: minmax(64px, 1fr);
+		grid-template-areas:
+			"address contact sitemap"
+			"address contact sitemap";
+	}
+
+	.advertisement{display:none;}
+
+}
+
+/*desktop*/
+@media screen and (min-width: 1201px){
+
+	body{font-size: 20px;}
+
+	h1{font-size: 34px;}
+
+	.footer{
+		grid-template-columns: 3fr;
+		grid-template-rows: minmax(85.3333333px, 1fr);
+		grid-template-areas:
+			"address contact sitemap"
+			"address contact sitemap";
+	}
+
+}

@@ -1,0 +1,162 @@
+/*Adjust id and class names and other things for your pages.*/
+
+
+/*shopping cart settings for all responsive layout.*/
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i|Fresca|Monda:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "EB Garamond", serif;
+}
+
+h1, h2 {
+  font-family: "Monda", sans-serif;
+}
+
+input[type=checkbox]#shopping_toggle {
+  position: fixed;
+  visibility: hidden;
+}
+
+/*when shopping cart image is click, off canvas will show*/
+input[type=checkbox]:checked ~ .shopping_off_canvas {
+  margin-right: 0px;
+}
+
+.shopping_off_canvas > .product_name {
+  text-align: right;
+}
+
+.shopping_off_canvas > .total_price {
+  text-align: right;
+  font-weight: bold;
+}
+
+/*settings for buttons in off canvas*/
+.shopping_off_canvas > p#pay.button, .shopping_off_canvas > p#back.button {
+  width: 100%;
+  height: auto;
+  background-color: #78FF00;
+  margin: 5px;
+  border: 1px solid #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shopping_off_canvas > p#pay.button:hover, .shopping_off_canvas > p#back.button:hover {
+  background-color: #58BA00;
+  cursor: pointer;
+}
+
+.shopping_off_canvas > a.back_link:link {
+  text-decoration: none;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 767px) {
+  
+  body {font-size: 11px;}
+
+  h1 {font-size: 20px;}
+
+  h2 {font-size: 16px;}
+
+  /*shopping cart image size*/
+  .shopping_cart {
+    width: 32px;
+    height: 32px;
+  }
+  /*shopping cart off canvas settings*/
+  .shopping_off_canvas {
+    width: 120px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    margin-right: -120px;
+    font-size: 20px;
+    background: rgba(36, 255, 0, 0.5);
+    padding: 10px;
+    transition: margin 0.3s;
+    z-index: 100;
+  }
+
+  /*when back button is pushed, off canvas will go back*/
+  input[type=checkbox]:checked ~ .shopping_off_canvas > p#back.button {
+    margin-right: -120px;
+  }
+}
+
+
+
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  
+  body {font-size: 16px;}
+
+  h1 {font-size: 30px;}
+
+  h2 {font-size: 22px;}
+
+  .shopping_cart {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shopping_off_canvas {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    margin-right: -250px;
+    font-size: 20px;
+    background: rgba(36, 255, 0, 0.5);
+    padding: 10px;
+    transition: margin 0.3s;
+    z-index: 100;
+  }
+
+  input[type=checkbox]:checked ~ .shopping_off_canvas > p#back.button {
+    margin-right: -250px;
+  }
+}
+
+
+
+/*desktop*/
+@media screen and (min-width: 1201px) {
+
+  body {font-size: 16px;}
+
+  h1 {font-size: 32px;}
+
+  h2 {font-size: 24px;}
+
+  .shopping_cart {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shopping_off_canvas {
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    margin-right: -300px;
+    font-size: 20px;
+    background: rgba(36, 255, 0, 0.5);
+    padding: 10px;
+    transition: margin 0.3s;
+    z-index: 100;
+  }
+
+  input[type=checkbox]:checked ~ .shopping_off_canvas > p#back.button {
+    margin-right: -300px;
+  }
+}

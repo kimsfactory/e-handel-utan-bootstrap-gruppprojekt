@@ -1,0 +1,161 @@
+
+/* ----- CSS GRID FLEX----------- */
+
+.pictures   {flex: 1 1 50%;}
+.info       {flex: 1 1 50%;}
+
+.laptops img    {width:200px;}
+
+.desktops img {width: 90px;
+                margin-left:40px;}
+
+.tablets img   {width: 200px;}
+                               
+.ereaders img   {width: 140px;
+                margin:20px;}
+
+.banner img     {width:100vw;
+                height: 80%}
+
+
+h2              {justify-items: flex-start;}
+
+
+.laptops, .desktops, .tablets, .ereaders {display:flex;
+                                        align-items: flex-start;
+                                        flex-direction: row;
+                                       }
+.banner         {grid-area: banner;
+
+                display: flex;
+                justify-content: center;
+                }
+
+.laptops 		{grid-area: laptops;}
+
+.desktops		{grid-area: desktops;} 
+
+.tablets		{grid-area: tablets;}
+
+.ereaders		{grid-area: ereaders;}
+
+/* footer */
+
+
+
+.address {grid-area: address;}
+.contact {grid-area: contact;}
+
+
+
+.footer         {grid-area: footer;
+                padding:20px;
+                display: grid;
+                justify-content: space-evenly;
+                background-color: rgba(36,255,0,0.5);
+                border-top: 2px solid #000;
+                margin: 0px;
+                grid-column-gap: 2%;
+                grid-template-columns: 2fr;
+                grid-template-rows: minmax(53.3333333px, 1fr);
+                 grid-template-areas:
+                "address contact"}
+.footer h1       {font-size: 20px;}
+.footer p        {font-size: 12px;} 
+.sitemap          {display:none;}    
+
+
+.frontpagecontent           {height: 80vh;
+                	       margin: 20px auto;
+			                 display: grid;
+                	       grid-template-columns: repeat (1, 1fr);
+                	       grid-template-rows: repeat(4, minmax(200px, auto));
+                	       grid-template-areas: 
+                        	"banner"
+                            "laptops"
+                        	"desktops"
+                        	"tablets"
+                        	"ereaders"
+                            "footer";}
+
+/* ----- Media Queries ----------- */
+
+@media screen and (min-width: 768px){
+
+        .frontpagecontent       {
+                        	margin: 20px auto;
+        					display: grid;
+                        	grid-template-columns: repeat (2, 1fr);
+                        	grid-template-rows: repeat(2, minmax(200px, auto));
+                        	grid-template-areas: 
+                        	"banner banner"
+                            "laptops desktops"
+                        	"tablets ereaders"
+                            "footer footer";}
+
+        .laptops, .desktops, .tablets, .ereaders {margin: 0 40px 80px 40px;}
+
+        .sitemap {grid-area: sitemap;
+                    display: block;}
+
+        a {margin:5px;}
+
+        .footer{
+        grid-template-columns: 3fr;
+        grid-template-rows: minmax(64px, 1fr);
+        grid-template-areas:
+            "address contact sitemap"
+            "address contact sitemap";
+    }
+
+       
+        .footer h1       {font-size: 30px;}
+        .footer p        {font-size: 18px;}  
+
+}
+
+
+
+
+       
+
+
+}
+
+@media screen and (min-width: 1200px){
+
+        .frontpagecontent       {width:75vw;
+                            margin: 20px auto;
+                            display: grid;
+                            grid-template-columns: repeat (2, 1fr);
+                            grid-template-rows: repeat(2, minmax(200px, auto));
+                            grid-template-areas: 
+                            "banner banner"
+                            "laptops desktops"
+                            "tablets ereaders"
+                            "footer footer";}
+
+
+        .banner img     {width:75vw;
+                        }
+        .footer h1       {font-size: 34px;}
+        .footer p        {font-size: 20px;} 
+
+        .footer{
+        grid-template-columns: 3fr;
+        grid-template-rows: minmax(85.3333333px, 1fr);
+        grid-template-areas:
+            "address contact sitemap"
+            "address contact sitemap";
+    }
+
+
+}
+
+
+
+
+
+
+  
+           
